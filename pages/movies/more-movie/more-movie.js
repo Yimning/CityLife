@@ -35,7 +35,7 @@ Page({
   },
   onPullDownRefresh: function (event) {
     var refreshUrl = this.data.requestUrl +
-      "?star=0&count=20"
+      "&star=0&count=20";
     this.data.movies = {};
     this.data.isEmpty = true;
     this.data.totalCount = 0;
@@ -45,7 +45,7 @@ Page({
   onReachBottom: function (event) {
     // 上滑加载
     var nextUrl = this.data.requestUrl +
-      "?start=" + this.data.totalCount + "&count=20";
+      "&start=" + this.data.totalCount + "&count=20";
     util.http(nextUrl, this.processDoubanData)
     wx.showNavigationBarLoading()
   },

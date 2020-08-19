@@ -94,7 +94,7 @@ Page({
   //搜索框失去焦点开始搜索
   onBindBlur: function (event) {
     var text = event.detail.value;
-    var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;
+    var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text +"&apikey=" + app.globalData.appKey;;
     this.getMovieListData(searchUrl, "searchResult", "");
   },
 

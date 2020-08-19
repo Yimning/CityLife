@@ -6,7 +6,7 @@ Page({
     markers: [],
     latitude: '',
     longitude: '',
-    placeData: {title:'点击图上marker获得详细信息哦☺️'},
+    placeData: {title:'点击图上marker获得详细信息☺️'},
     searchMethod: '酒店',
     bitmap: '',
     fail: '',
@@ -84,7 +84,7 @@ Page({
     this.setData({
       searchMethod: '酒店',
       selsectState: [1, 0, 0],
-      placeData: { title: '点击图上marker获得附近-酒店-信息哦☺️' }
+      placeData: { title: '点击图上marker获得附近-酒店-信息☺️' }
     });
     this.onShow();
   },
@@ -93,7 +93,7 @@ Page({
     this.setData({
       searchMethod: '美食',
       selsectState: [0, 1, 0],
-      placeData: { title: '点击图上marker获得附近-美食-信息哦☺️' }
+      placeData: { title: '点击图上marker获得附近-美食-信息☺️' }
     });
     this.onShow();
   },
@@ -102,7 +102,7 @@ Page({
     this.setData({
       searchMethod: '生活服务',
       selsectState: [0, 0, 1],
-      placeData: { title: '点击图上marker获得附近-生活服务-信息哦☺️' }
+      placeData: { title: '点击图上marker获得附近-生活服务-信息☺️' }
     });
     this.onShow();
   },

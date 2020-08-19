@@ -28,13 +28,15 @@
 		<view>
 		  <image class="list-image" src="{{item.thumbnail_pic_s}}" mode="aspectFill"/>
 		</view>
+    
       <view class="news-text">
-        <text class="news-title">{{item.title}}</text>
+        <text class="news-title">{{item.title.length< 36 ? item.title:item.title +"..."}}</text>
         <view class="news-stamp">
           <text>{{item.author_name}}</text>
           <text>{{item.date}}</text>
         </view>
       </view>
+
     </view>
   </block>
 </view>

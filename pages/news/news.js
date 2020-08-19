@@ -33,7 +33,7 @@ Page({
 
   //数据受限没有详情信息，给用户一个提示就好
   bindViewTap: function (event) {
-    wx.showModal({
+/*     wx.showModal({
       title: '提示',
       content: '实时更新，但因为免费接口资源受限，新闻详情请访问官方网站哈😘',
       success: function (res) {
@@ -51,6 +51,11 @@ Page({
           })
         }
       }
+    }) */
+    var url = event.currentTarget.dataset.url;
+    console.log(url);
+    wx.navigateTo({
+      url: 'content/content?contenturl=' + url,
     })
   },
 

@@ -3,19 +3,21 @@
     "pages/welcome/welcome",
     "pages/index/index",
     "pages/movies/movies",
-    "pages/switchcity/switchcity",
     "pages/weather/weather",
+    "pages/switchcity/switchcity",
     "pages/news/news",
     "pages/movies/movie-detail/movie-detail",
     "pages/movies/more-movie/more-movie",
     "pages/map/map",
     "pages/logs/logs",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/news/content/content"
   ],
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#2a579a",
-    "navigationBarTitleText": "e 生活",
+    "navigationBarTitleText": "City Life",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -30,7 +32,7 @@
       },
       {
         "pagePath": "pages/map/map",
-        "text": "周边"
+        "text": "附近"
       },
       {
         "pagePath": "pages/movies/movies",
@@ -45,6 +47,11 @@
         "text": "更多"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }

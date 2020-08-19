@@ -9,9 +9,9 @@ Page({
     location: '',
     county: '',
     sliderList: [
-      { selected: true, imageSource: 'http://up.enterdesk.com/edpic/7d/35/13/7d3513ecabdf1f7eb4f1407f0e82f23c.jpg' },
-      { selected: false, imageSource: '../../images/2.jpg' },
-      { selected: false, imageSource: 'http://pic1.win4000.com/wallpaper/9/538544be6ae36.jpg' },
+      { selected: true, imageSource: '../../images/2.jpg' },
+      { selected: false, imageSource: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597664766028&di=ff501631d4364b4b46b3e0c7a150f38f&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Fback_pic%2F03%2F79%2F72%2F9157c2e178bc4ad.jpg' },
+      { selected: false, imageSource: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597664497332&di=329c55c5f0bfcc9b177d9a1ebeade39e&imgtype=0&src=http%3A%2F%2Fwww.50cnnet.com%2Fuploads%2Ffile%2Fcontent%2F2018%2F01%2F5a587e00c4aad.jpg' },
     ],
     today: "",
     inTheaters: {},
@@ -31,7 +31,7 @@ Page({
     this.getLocation();
     //获取豆瓣电影正在热映信息
     var inTheatersUrl = app.globalData.doubanBase +
-      "/v2/movie/in_theaters" + "?start=0&count=6";
+      "/v2/movie/in_theaters" + "?start=0&count=6"+"&apikey=" + app.globalData.appKey;;
     this.getMovieListData(inTheatersUrl, "inTheaters", "正在热映");
 
     //获取用户信息
@@ -46,6 +46,14 @@ Page({
     })
 
   },
+    /*查看图片*/
+    viewMoviePostImg: function (e) {
+      var src = e.currentTarget.dataset.src;
+      wx.previewImage({
+        current: src, // 当前显示图片的http链接
+        urls: [src] // 需要预览的图片http链接列表
+      })
+    },
 
   //调用豆瓣api
   getMovieListData: function (url, settedKey, categoryTitle) {

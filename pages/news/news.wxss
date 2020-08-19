@@ -31,6 +31,8 @@
 .news-title {
   margin: 10rpx;
   font-size: 30rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
 }
 
 
@@ -46,7 +48,7 @@
 
 .list-image {
   width:150rpx;
-  height:100rpx;
+  height:120rpx;
 }
 
 .swiper-image {
@@ -72,3 +74,4 @@
 .tabText{
   margin:0 0 0 40rpx;
 }
+

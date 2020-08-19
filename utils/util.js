@@ -33,6 +33,14 @@ function cityList() {
   return tempArr;
 }
 
+//时间戳
+function timest(){
+  var tmp = Date.parse( new Date() ).toString();
+  tmp = tmp.substr(0,10);
+  return tmp;
+}
+
+
 //豆瓣电影
 function convertToStarsArray(stars) {
   var num = stars.toString().substring(0, 1);
@@ -103,6 +111,7 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+
 module.exports = {
   searchLetter: searchLetter,
   cityList: cityList,
@@ -111,6 +120,7 @@ module.exports = {
   convertToStarsArray: convertToStarsArray,
   http: http,
   convertToCastString: convertToCastString,
-  convertToCastInfos: convertToCastInfos
+  convertToCastInfos: convertToCastInfos,
+  timest: timest,
 }
 
