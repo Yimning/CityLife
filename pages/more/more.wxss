@@ -70,7 +70,7 @@
   background-color: #f2f2f2;
   height: 60rpx;
 /*   width: 100%; */
-  margin-right: 20rpx;
+  margin-right: 210rpx;
   display: flex;
   flex-direction: row;
 }
@@ -95,7 +95,10 @@
     width: 30rpx;
     margin:auto 0 auto 10rpx;
 }
-
+.tip{
+  font-size: 32rpx;
+  flood-color: black;
+}
 
 .single-view-container{
   float:left;

@@ -1,4 +1,16 @@
-<view class='wrap'>
-  <image class="welcomeImg" src="../../images/UNSLEEP.png" bindtap='clickLogo'/>
-</view>
+<view class="container">
+	<view class="userinfo">
+		<button class="btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+		<block wx:else>
+			<image bindtap="bindViewTap" class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<!--  <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+		</block>
+	</view>
+	<view>
+		<text class="motto">{{moto}}{{userInfo.nickName}}</text>
+	</view>
 
+	<view class="journey-container"  wx:if="{{hasUserInfo && canIUse}}" bindtap="onTap">
+		<text class="journey">开启小程序之旅</text>
+	</view>
+</view>

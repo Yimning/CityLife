@@ -39,12 +39,18 @@
 
 	<view wx:elif="{{selectIndex==1}}">
 		<view class="search">
-		  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+			<icon type="search" class="search-img" size="13" color="#405f80"></icon>
 			<input type="text" placeholder="一五一十" placeholder-class="placeholder" bindfocus="onBindFocus" bindblur="onBindBlur" />
-		 <image wx:if="{{searchPanelShow}}" src="/images/icon/xx.png" class="xx-img" bindtap="onCancelImgTap"></image>
+			<image wx:if="{{searchPanelShow}}" src="/images/icon/xx.png" class="xx-img" bindtap="onCancelImgTap"></image>
 		</view>
-		<block>
-			<text>hd</text>
+		<block wx:for="{{dictionary}}" wx:for-item="item" wx:for-index="idx">
+			<view class="showContent">
+				<view class="tip">拼音:<text>{{item.pinyin}}</text></view> 
+				<view class="tip">成语解释:<text>{{item.chengyujs}}</text></view> 
+				<view class="tip">词语解释:<text>{{item.ciyujs}}</text></view>
+				<view class="tip">造句:<text>{{item.lizi}}</text></view> 
+				<view class="tip">同义词:<text>{{item.tongyi}}</text></view> 
+			</view>
 		</block>
 	</view>
 
